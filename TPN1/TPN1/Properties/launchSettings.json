@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TPN1 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TPN1 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
