@@ -28,5 +28,10 @@ namespace ExerciceMaisons
             this.InitializeComponent();
             lvProprietaires.ItemsSource = SingletonProprietaire.getInstance().getListeProprietaires();
         }
+
+        private void lvProprietaires_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

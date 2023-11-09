@@ -10,6 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock x:Name="txtBlNomProprio" Margin="10" FontSize="25"></TextBlock>
         <GridView x:Name="gvMaisons"  Margin="10 30 10 10" Grid.Row="4">
             <GridView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -32,10 +33,11 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="1" Text="{x:Bind id}" FontSize="20" TextAlignment="Center" />
+
                             <TextBlock Grid.Column="1" Grid.Row="1" Text="{x:Bind Categorie}" FontSize="20" />
                             <TextBlock Grid.Column="1" Grid.Row="2" Text="{x:Bind Prix}" FontSize="20" />
                             <TextBlock Grid.Column="1" Grid.Row="3" Text="{x:Bind Ville}" FontSize="20" />
+
                         </Grid>
                     </StackPanel>
                 </DataTemplate>

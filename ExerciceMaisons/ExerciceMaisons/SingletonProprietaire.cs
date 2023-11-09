@@ -60,7 +60,27 @@ namespace ExerciceMaisons
                 connection.Close();
             }
         }
+         
+        public void afficherMaisonsDesProprio(int idP)
+        {
+            try
+            {
+                //appel de la procédure stockées (plus de requête SQL)
+                MySqlCommand commande = new MySqlCommand("p_ajout_maisons_proprietaire");
+                commande.Connection = connection;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
 
+                commande.Parameters.AddWithValue("idP", idP);
+
+                connection.Open();
+                commande.Prepare();
+                commande.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                connection.Close();
+            }
+        }
 
         /// <summary>
         /// Permet d'avoir la liste à jour à partir des données de la BD

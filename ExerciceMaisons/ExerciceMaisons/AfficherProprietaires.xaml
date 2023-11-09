@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock Margin="10" FontSize="25" FontWeight="Bold" TextAlignment="Center">Liste des propriétaires</TextBlock>
-        <ListView x:Name="lvProprietaires" Grid.Row="1">
+        <ListView x:Name="lvProprietaires" Grid.Row="1" SelectionChanged="lvProprietaires_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Proprietaire">
                     <StackPanel Orientation="Horizontal" Margin="10"   HorizontalAlignment="Stretch">
