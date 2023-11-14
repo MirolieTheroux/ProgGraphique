@@ -84,5 +84,13 @@ namespace GestionProjetsEtClients
             else
                 return false;
         }
+
+        public bool isStatutValide(int index)
+        {
+            if (index >= 0)
+                return true;
+            else
+                return false;
+        }
     }
 }
